@@ -69,11 +69,11 @@ for _ in range(3):
 
 
 while True:
-    if teamsMode is False:  # Switch is toggled "on" (active low)
+    if teamsMode.value is False:  # Switch is toggled "on" (active low)
         ledTeamsMode.value = True  # Activates the LED status to ON
         print("Microsoft Teams mode active")
         # Commands for Microsoft Teams Meetings below
-        while True:
+        while teamsMode.value is False:
             if button1.value is False:  # Button pressed (active low)
                 led1.value = not led1.value  # This toggles the LED on / off
                 keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.K)  # Mimics pressing CTRL+SHIFT+K
@@ -101,11 +101,11 @@ while True:
                 while button3.value is False:
                     time.sleep(0.01)
 
-    if teamsMode is not False:  # Switch is toggled "off" (active low is not set)
+    if teamsMode.value is not False:  # Switch is toggled "off" (active low is not set)
         ledTeamsMode.value = False  # Sets the LED status to off
         print("Google Meet mode Active")
         # Commands for Google Meetings below
-        while True:
+        while teamsMode.value is not False:
             if button1.value is False:  # Button pressed (active low)
                 led1.value = not led1.value  # This toggles the LED on / off
                 keyboard.press(Keycode.CONTROL, Keycode.ALT, Keycode.H)  # Mimics pressing CTRL+ALT+H
