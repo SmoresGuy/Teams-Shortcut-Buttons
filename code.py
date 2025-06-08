@@ -73,64 +73,64 @@ while True:
         ledTeamsMode.value = True  # Activates the LED status to ON
         print("Microsoft Teams mode active")
         # Commands for Microsoft Teams Meetings below
+        while True:
+            if button1.value is False:  # Button pressed (active low)
+                led1.value = not led1.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.K)  # Mimics pressing CTRL+SHIFT+K
+                print("Raise / Lower Hand button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button1.value is False:
+                    time.sleep(0.01)
 
-        if button1.value is False:  # Button pressed (active low)
-            led1.value = not led1.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.K) # Mimics pressing CTRL+SHIFT+K
-            print("Raise / Lower Hand button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button1.value is False:
-                time.sleep(0.01)
+            if button2.value is False:  # Button pressed (active low)
+                led2.value = not led2.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.O)  # Mimics pressing CTRL+SHIFT+O
+                print("Camera on/off button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button2.value is False:
+                    time.sleep(0.01)
 
-        if button2.value is False:  # Button pressed (active low)
-            led2.value = not led2.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.O) # Mimics pressing CTRL+SHIFT+O
-            print("Camera on/off button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button2.value is False:
-                time.sleep(0.01)
-
-        if button3.value is False:  # Button pressed (active low)
-            led3.value = not led3.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.M) # Mimics pressing CTRL+SHIFT+M
-            print("Mute / Unmute button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button3.value is False:
-                time.sleep(0.01)
+            if button3.value is False:  # Button pressed (active low)
+                led3.value = not led3.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.SHIFT, Keycode.M)  # Mimics pressing CTRL+SHIFT+M
+                print("Mute / Unmute button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button3.value is False:
+                    time.sleep(0.01)
 
     if teamsMode is not False:  # Switch is toggled "off" (active low is not set)
         ledTeamsMode.value = False  # Sets the LED status to off
         print("Google Meet mode Active")
         # Commands for Google Meetings below
+        while True:
+            if button1.value is False:  # Button pressed (active low)
+                led1.value = not led1.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.ALT, Keycode.H)  # Mimics pressing CTRL+ALT+H
+                print("Raise / Lower Hand button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button1.value is False:
+                    time.sleep(0.01)
 
-        if button1.value is False:  # Button pressed (active low)
-            led1.value = not led1.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.ALT, Keycode.H)  # Mimics pressing CTRL+ALT+H
-            print("Raise / Lower Hand button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button1.value is False:
-                time.sleep(0.01)
+            if button2.value is False:  # Button pressed (active low)
+                led2.value = not led2.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.E)  # Mimics pressing CTRL+E
+                print("Camera on/off button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button2.value is False:
+                    time.sleep(0.01)
 
-        if button2.value is False:  # Button pressed (active low)
-            led2.value = not led2.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.E)  # Mimics pressing CTRL+E
-            print("Camera on/off button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button2.value is False:
-                time.sleep(0.01)
-
-        if button3.value is False:  # Button pressed (active low)
-            led3.value = not led3.value  # This toggles the LED on / off
-            keyboard.press(Keycode.CONTROL, Keycode.D)  # Mimics pressing CTRL+D
-            print("Mute / Unmute button pressed")
-            time.sleep(DEBOUNCE_TIME)  # Debounce
-            keyboard.release_all()  # Release all keys
-            while button3.value is False:
-                time.sleep(0.01)
+            if button3.value is False:  # Button pressed (active low)
+                led3.value = not led3.value  # This toggles the LED on / off
+                keyboard.press(Keycode.CONTROL, Keycode.D)  # Mimics pressing CTRL+D
+                print("Mute / Unmute button pressed")
+                time.sleep(DEBOUNCE_TIME)  # Debounce
+                keyboard.release_all()  # Release all keys
+                while button3.value is False:
+                    time.sleep(0.01)
 
     time.sleep(0.01)  # Delay
