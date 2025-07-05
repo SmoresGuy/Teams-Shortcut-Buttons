@@ -56,10 +56,11 @@ for _ in range(3):
     led3.value = False
     time.sleep(STARTUP_BLINK_TIME)
 
+print("Google Meet on Mac mode Active")
+# Commands for Google Meetings below on Mac  --  Each File will be different for the Use case.
 
 while True:
-        print("Google Meet mode Active")
-        # Commands for Google Meetings below on Mac  --  Each File will be different for the Use case.
+
 
         if button1.value is False:  # Button pressed (active low)
             led1.value = not led1.value  # This toggles the LED on / off
