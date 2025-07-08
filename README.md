@@ -1,6 +1,6 @@
 # Introduction on my changes
 
-I took the work done by @TellinStories and wanted to make work with Google Meet as that my standard platform at work, but I still wanted to support the Teams on a single box. My version introduces a switch to "toggle" between Google Meet Commands and MicroSoft Teams Commands. I added this another GPIO on the opposite side of the RP2040 Zero for ease of installation. If you choose to use this without the Switch, the code will default to Google Meet as I created the switch to be an "Override to support Teams". 
+I took the work done by @TellinStories and wanted to make work with Google Meet as that my standard platform at work, but I still wanted to support the Teams on a single box, however that will have to wait. For now, my version introduces a Mac verion of the codes. Each file is named as such.  
 
 ## Original content from [Team-Shortcut-Buttons](https://github.com/TellinStories/Teams-Shortcut-Buttons) with _modifications highlighted with italics_
 
